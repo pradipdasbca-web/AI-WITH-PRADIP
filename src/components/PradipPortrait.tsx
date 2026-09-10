@@ -154,8 +154,8 @@ export const PradipPortrait: React.FC<PradipPortraitProps> = ({
         {/* Ambient Bottom Gradient to blend seamlessly */}
         <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#0B1B3A] via-[#0B1B3A]/60 to-transparent pointer-events-none" />
 
-        {/* Floating Credibility Pill */}
-        <div className="absolute bottom-4 left-4 right-4 z-20 flex items-center justify-between bg-[#0B1B3A]/90 backdrop-blur-md border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white shadow-lg">
+        {/* Floating Credibility Pill with Light Border Effect */}
+        <div className="absolute bottom-4 left-4 right-4 z-20 flex items-center justify-between bg-[#0B1B3A]/90 backdrop-blur-md border border-blue-400/60 rounded-xl px-4 py-2.5 text-xs text-white shadow-[0_0_20px_rgba(59,130,246,0.4)] ring-1 ring-blue-300/40">
           <div className="flex items-center space-x-2.5">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
             <span className="font-medium tracking-wide">

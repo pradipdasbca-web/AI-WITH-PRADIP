@@ -30,3 +30,96 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3B8;
 }
+
+/* RGB Lighting Border Animation */
+@keyframes rgb-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.rgb-border-lighting {
+  position: relative;
+}
+
+.rgb-border-lighting::before,
+.rgb-border-lighting::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff0055, #ff7700, #ffcc00, #00ff66, #00d4ff, #8a2be2, #ff0077, #ff0055);
+  background-size: 300% 100%;
+  animation: rgb-flow 4s linear infinite;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.7), 0 0 24px rgba(255, 0, 119, 0.5);
+  z-index: 20;
+}
+
+.rgb-border-lighting::before {
+  top: 0;
+}
+
+.rgb-border-lighting::after {
+  bottom: 0;
+}
+
+.rgb-border-bottom {
+  position: relative;
+}
+
+.rgb-border-bottom::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, #ff0055, #ff7700, #ffcc00, #00ff66, #00d4ff, #8a2be2, #ff0077, #ff0055);
+  background-size: 300% 100%;
+  animation: rgb-flow 4s linear infinite;
+  box-shadow: 0 1px 12px rgba(0, 212, 255, 0.7), 0 1px 24px rgba(255, 0, 119, 0.4);
+  z-index: 30;
+}
+
+@keyframes text-rgb-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-rgb-text {
+  background: linear-gradient(90deg, #ffffff, #93c5fd, #a7f3d0, #fbcfe8, #67e8f9, #ffffff);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-rgb-shimmer 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+
